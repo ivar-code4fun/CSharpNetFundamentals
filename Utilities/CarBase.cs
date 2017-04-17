@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace Utilities
 {
-    public abstract class Car
+    public abstract class CarBase : ICar
     {
-        public Car(string make, string model, int year, Color color)
+        public CarBase(string make, string model, int year, Color color)
         {
             Make = make;
             Model = model;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Utilities
 {
-    public class Hooptie : Car
+    public class Hooptie : CarBase
     {
         public Hooptie() : base("Cadillac", "Coupe deVille", 1998, Color.Black )
         {
@@ -40,7 +40,7 @@ namespace Utilities
                 Console.WriteLine("Griiiiiiinnnnnndddd");
         }
 
-        public override void Start()
+        public new void Start()
         {
             Console.WriteLine("Click, click, click!");
         }

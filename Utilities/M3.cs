@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Utilities
 {
-    public class M3 : Car
+    public class M3 : CarBase
     {
         public M3() : base("BMW", "M3", 2008, Color.Silver)
         {

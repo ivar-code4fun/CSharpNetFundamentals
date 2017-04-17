@@ -12,7 +12,7 @@ namespace Abstractions
     {
         static void Main(string[] args)
         {
-            Car[] cars = { new M3 { Color = Color.Silver },
+            ICar[] cars = { new M3 { Color = Color.Silver },
                             new Hooptie { Color = Color.Black }
                           };
 
@@ -25,9 +25,13 @@ namespace Abstractions
                 car.PressBrake(2);
                 car.PressBrake(10);
             }
+
+            Console.WriteLine("Here is a new hooptie!");
+            Hooptie hooptie = new Hooptie();
+            hooptie.Start();
         }
 
-        static void PrintInfo(Car car)
+        static void PrintInfo(ICar car)
         {
             Console.WriteLine("Here is a {0} {1} {2} {3}",car.Color.Name,car.Year,car.Make,car.Model);
         }
