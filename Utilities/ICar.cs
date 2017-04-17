@@ -5,6 +5,7 @@ namespace Utilities
 {
     public interface ICar
     {
+        void Start();
         void PressAccelerate(double howFar);
         void PressBrake(double pressure);
 
@@ -12,7 +13,6 @@ namespace Utilities
         string Model { get; }
         int Year { get; }
         Color Color { get; set; }
-        void Start();
     }
 
 }

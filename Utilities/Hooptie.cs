@@ -7,38 +7,22 @@ using System.Threading.Tasks;
 
 namespace Utilities
 {
-    public class Hooptie : ICar
+    public class Hooptie : Car
     {
-        public Color Color
+        public Hooptie() : base("Cadillac", "Coupe deVille", 1998, Color.Black )
         {
-            get; set;
+
         }
 
-        public string Make
-        {
-            get
-            {
-                return "Cadillac";
-            }
-        }
+        //public Color Color { get; set; }
 
-        public string Model
-        {
-            get
-            {
-                return "Coupe deVille";
-            }
-        }
+        //public string Make { get { return "Cadillac"; } }
 
-        public int Year
-        {
-            get
-            {
-                return 1998;
-            }
-        }
+        //public string Model { get { return "Coupe deVille"; } }
 
-        public void PressAccelerate(double howFar)
+        //public int Year { get { return 1998; } }
+
+        public override void PressAccelerate(double howFar)
         {
             if (howFar < 9)
             {
@@ -48,7 +32,7 @@ namespace Utilities
                 Console.WriteLine("Cough!");
         }
 
-        public void PressBrake(double pressure)
+        public override void PressBrake(double pressure)
         {
             if (pressure < 5)
                 Console.WriteLine("Squeek");
@@ -56,7 +40,7 @@ namespace Utilities
                 Console.WriteLine("Griiiiiiinnnnnndddd");
         }
 
-        public void Start()
+        public override void Start()
         {
             Console.WriteLine("Click, click, click!");
         }

@@ -3,50 +3,30 @@ using System.Drawing;
 
 namespace Utilities
 {
-    public class M3 : ICar
+    public class M3 : Car
     {
-        public Color Color
+        public M3() : base("BMW", "M3", 2008, Color.Silver)
         {
-            get; set;
+
         }
 
-        public string Make
-        {
-            get
-            {
-                return "BMW";
-            }
-        }
+        //public Color Color { get; set; }
 
-        public string Model
-        {
-            get
-            {
-                return "M3";
-            }
-        }
+        //public string Make { get { return "BMW"; } }
 
-        public int Year
-        {
-            get
-            {
-                return 2016;
-            }
-        }
+        //public string Model { get { return "M3"; } }
 
-        public void PressAccelerate(double howFar)
+        //public int Year { get { return 2016; } }
+
+        public override void PressAccelerate(double howFar)
         {
             Console.WriteLine("Vroom vroom!");
         }
 
-        public void PressBrake(double pressure)
+        public override void PressBrake(double pressure)
         {
             Console.WriteLine("Stopped on a dime!");
         }
 
-        public void Start()
-        {
-            Console.WriteLine("Roar!");
-        }
     }
 }
