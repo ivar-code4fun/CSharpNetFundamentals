@@ -45,6 +45,7 @@
     <Compile Include="Hooptie.cs" />
     <Compile Include="CarBase.cs" />
     <Compile Include="ICar.cs" />
+    <Compile Include="KeystrokeHandler.cs" />
     <Compile Include="M3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

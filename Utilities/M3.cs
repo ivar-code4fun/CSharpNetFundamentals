@@ -26,6 +26,7 @@ namespace Utilities
         public override void PressBrake(double pressure)
         {
             Console.WriteLine("Stopped on a dime!");
+            FireCarStoppedEvent();
         }
 
     }

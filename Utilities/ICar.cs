@@ -13,6 +13,8 @@ namespace Utilities
         string Model { get; }
         int Year { get; }
         Color Color { get; set; }
+
+        event EventHandler CarStopped;
     }
 
 }

@@ -25,6 +25,15 @@ namespace Utilities
         public string Model { get; private set; }
         public int Year { get; private set; }
         public Color Color { get; set; }
+
+        public event EventHandler CarStopped;
+
+
+        protected void FireCarStoppedEvent()
+        {
+            if (null != CarStopped)
+                CarStopped(this,EventArgs.Empty);
+        }
     }
 
 }
