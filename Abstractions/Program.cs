@@ -12,12 +12,56 @@ namespace Abstractions
     {
         static void Main(string[] args)
         {
+            //ObjectCasting();
 
             //CarStoppedDelegate();
 
             //KeystrokeDelegate();
 
             //CarInterface();
+        }
+
+        private static void ObjectCasting()
+        {
+            object[] cars =
+                        {
+                new M3(),
+                new Hooptie()
+            };
+
+            foreach (ICar car in cars)
+            {
+                Console.WriteLine(car);
+                Is(car);
+                As(car);
+                Cast(car);
+                Console.WriteLine("---------------");
+            }
+        }
+
+        private static void Cast(object car)
+        {
+            try
+            {
+                M3 m3 = (M3)car;
+                Console.WriteLine("M3 returned a {0}", m3);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Exception : {0}",ex.Message);
+            }
+        }
+
+        private static void As(object car)
+        {
+            M3 m3 = car as M3;
+            Console.WriteLine("as M3 returned {0}",m3);
+        }
+
+        private static void Is(object car)
+        {
+            bool isICar = car is ICar;
+            Console.WriteLine("is ICar returned {0}",isICar);
         }
 
         private static void CarStoppedDelegate()

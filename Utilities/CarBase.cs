@@ -5,6 +5,11 @@ namespace Utilities
 {
     public abstract class CarBase : ICar
     {
+        public override string ToString()
+        {
+            return String.Format("{0} {1} {2} {3}", Color.Name, Year, Make, Model);
+        }
+
         public CarBase(string make, string model, int year, Color color)
         {
             Make = make;
